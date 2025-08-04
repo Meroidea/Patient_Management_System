@@ -1,0 +1,23 @@
+ private void doctorLogin() {
+        String id = doctorUsername.getText();
+        String pw = new String(doctorPassword.getPassword());
+
+        try {
+            DatabaseConnection db = new DatabaseConnection();
+            String q = "SELECT * FROM doctors WHERE doctor_id = ? AND password = ?";
+            PreparedStatement ps = db.connection.prepareStatement(q);
+            ps.setString(1, id);
+            ps.setString(2, pw);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(this, "Welcome, Dr. " + rs.getString("name"));
+                new Reception(); // or DoctorDashboard()
+                this.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(this, "Invalid doctor credentials", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
