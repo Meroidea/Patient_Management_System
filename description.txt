@@ -1,0 +1,26 @@
+🏥 Pakenham Hospital - Smart Patient Management System
+This Java-based Patient Management System (PMS) is a comprehensive desktop application designed for Pakenham Hospital to automate and manage patient-related workflows efficiently. Built using Java Swing, MySQL, and JDBC, the system provides secure multi-role access for doctors and patients with distinct dashboards and responsibilities.
+
+🎯 Key Features
+Role-Based Login: Secure login for doctors and patients with authentication via MySQL.
+
+Patient Registration: Form-based new patient admission with automatic patient ID generation, room selection, and timestamped enrollment.
+
+Doctor & Department Management: Preloaded doctor list with unique IDs, specialties, and contact info.
+
+Appointment Booking: Public access to request appointments by selecting doctor, date, and time — auto-stored with a unique appointment ID.
+
+Existing Patient Overview: Doctors can view active admissions, medical history, treatment status, and assigned room/doctors.
+
+User Interface: Clean, modular Swing UI with support for full-screen layout, dynamic panels, and resource-based background customization.
+
+MySQL Integration: Real-time data persistence for patients, doctors, and appointments using prepared statements and structured tables.
+
+🛠 Technologies
+Java (Swing)
+
+MySQL
+
+JDBC
+
+This project is designed with extensibility in mind and can serve as a foundational tool for modern hospital systems.
